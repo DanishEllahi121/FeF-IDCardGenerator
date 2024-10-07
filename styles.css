@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #343a40;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    text-align: left;
+    max-width: 400px;
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+    color: #495057;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="number"], input[type="file"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="file"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-right: 10px;
+    font-size: 1em;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ID Card Styling */
+.id-card {
+    display: none;
+    border: 2px solid #343a40;
+    width: 85.6mm; /* Standard ID card width */
+    height: 53.98mm; /* Standard ID card height */
+    padding: 20px;
+    margin: 20px auto;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+    text-align: left;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.college-name {
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #007bff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.id-card h2 {
+    text-align: center;
+    color: #343a40;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.id-card img {
+    float: right;
+    margin: 10px auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #343a40;
+}
+
+.id-card p {
+    margin: 10px 0;
+    color: #495057;
+    font-size: 1em;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+    }
+
+    .id-card {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .id-card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .id-card p {
+        font-size: 0.9em;
+    }
+}
