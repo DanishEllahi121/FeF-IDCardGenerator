@@ -5,32 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ID Card Generator</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
     <script src="script.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
     <h1>ID Card Generator</h1>
+
     <!-- Form to collect user details -->
     <form id="userForm">
         <label for="college-name">College Name:</label>
         <input type="text" id="college-name" name="college-name" required><br><br>
+        
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br><br>
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" required><br><br>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+        
         <label for="address">Address:</label>
         <input type="text" id="address" name="address" required><br><br>
+        
         <label for="idNumber">ID Number:</label>
         <input type="text" id="idNumber" name="idNumber" required><br><br>
+        
         <label for="photo">Upload Photo:</label>
         <input type="file" id="photo" accept="image/*"><br><br>
-        <button type="button" onclick="generateIDCard()">Generate ID Card</button>
-        <button type="button" onclick="downloadIDCard()">Download ID Card</button>
+        
+        <div class="btn-div">
+            <button type="button" onclick="generateIDCard()">Generate ID Card</button>
+            <button type="button" onclick="downloadIDCard()">Download ID Card</button>
+        </div>
     </form>
+
     <!-- ID Card Display Section -->
-    <div id="idCard" class="id-card">
+    <div id="idCard" class="id-card" style="display: none;">
         <div class="college-name" id="collegeName"></div>
-        <!-- The ID card content will be generated here -->
+        <h2>ID Card</h2>
+        <img id="profileImage" src="" alt="Profile Picture" style="display: none;">
+        <div class="details">
+            <p><strong>Name:</strong> <span id="displayName"></span></p>
+            <p><strong>Date of Birth:</strong> <span id="displayDOB"></span></p>
+            <p><strong>Address:</strong> <span id="displayAddress"></span></p>
+            <p><strong>ID Number:</strong> <span id="displayIDNumber"></span></p>
+        </div>
     </div>
+    <!-- Footer -->
+    <footer>
+        <p>Made with ❤️ by <a href="https://github.com/DanishEllahi121" target="_blank">Danish Ellahi</a></p>
+    </footer>
 </body>
 </html>
